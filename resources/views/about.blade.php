@@ -8,9 +8,10 @@
     <title>Halaman About | MSDH</title>
 </head>
 <body>
-    <h1>Halaman About</h1>
-    <h3><?= $name; ?></h3>
-    <p><?= $email; ?></p>
-    <img src="img/<?= $image; ?>" alt="<?= $name; ?>" width="200">
+    <h1>Meet Our Team!</h1>
+    <h3>{{$name}}</h3>
+    <p>Email: {{$email}}</p>
+    <img src="img/{{$image}}" alt="{{$name}}" width="200">
+    <p>Want to know more about our team members? Stay tuned for exciting updates!</p>
 </body>
 </html>
