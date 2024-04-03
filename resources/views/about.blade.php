@@ -14,7 +14,7 @@
         <h1>Meet me!</h1>
         <h3>{{$name}}</h3>
         <p>Email: {{$email}}</p>
-        <img src="img/{{$image}}" alt="{{$name}}" width="200">
+        <img src="img/{{$image}}" alt="{{$name}}" width="200" class="img-thumbnail rounded-circle">
         <p>Want to know more about me and project I haved done? Stay tuned for exciting updates!</p>
     </body>
     </html>
