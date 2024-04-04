@@ -25,7 +25,7 @@ class Post
         [
             "title" => "Administrasi Bisnis",
             "slug" => "administrasi-bisnis",
-            "author" => "Andini Khairunisa",
+            "author" => "Surtoyo",
             "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi placeat vel qui harum iusto eligendi saepe eum rerum eaque quod praesentium alias quibusdam expedita, debitis autem quisquam quis provident?
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta exercitationem aut inventore harum. Sint, qui illo suscipit sit nisi magni, cupiditate consequatur, quisquam dolores ex eum voluptates sapiente molestias consectetur.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto commodi. Sint maxime ipsam voluptatibus aut? Non, accusamus quisquam accusantium mollitia necessitatibus blanditiis quaerat impedit voluptates odio veniam dicta? Inventore!",
@@ -33,17 +33,17 @@ class Post
     ];
     public static function all()
     {
-        return self::$blog_posts;
+        return collect(self::$blog_posts);
     }
     public static function find($slug)
     {
-        $posts = self::$blog_posts;
-        $post = [];
-        foreach ($posts as $p) {
-            if ($p["slug"] === $slug) {
-                $post = $p;
-            }
-        }
-        return $post;
+        $posts = static::all();
+        // $post = [];
+        // foreach ($posts as $p) {
+        //     if ($p["slug"] === $slug) {
+        //         $post = $p;
+        //     }
+        // }
+        return $posts->firstWhere('slug', $slug);
     }
 }
