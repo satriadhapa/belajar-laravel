@@ -2,48 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class Post
+class Post extends Model
 {
-    private static $blog_posts = [
-        [
-            "title" => "Teknik Informatika",
-            "slug"  => "teknik-informatika",
-            "author" => "Moch Satria Dhapa Hamdani",
-            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi placeat vel qui harum iusto eligendi saepe eum rerum eaque quod praesentium alias quibusdam expedita, debitis autem quisquam quis provident?
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta exercitationem aut inventore harum. Sint, qui illo suscipit sit nisi magni, cupiditate consequatur, quisquam dolores ex eum voluptates sapiente molestias consectetur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto commodi. Sint maxime ipsam voluptatibus aut? Non, accusamus quisquam accusantium mollitia necessitatibus blanditiis quaerat impedit voluptates odio veniam dicta? Inventore!",
-        ],
-        [
-            "title" => "Pendidikan Bahasa dan Sastra Indonesia",
-            "slug"  => "pendidikan-bahasa-dan-sastra-indonesia",
-            "author" => "Ai Mulyati",
-            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi placeat vel qui harum iusto eligendi saepe eum rerum eaque quod praesentium alias quibusdam expedita, debitis autem quisquam quis provident?
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta exercitationem aut inventore harum. Sint, qui illo suscipit sit nisi magni, cupiditate consequatur, quisquam dolores ex eum voluptates sapiente molestias consectetur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto commodi. Sint maxime ipsam voluptatibus aut? Non, accusamus quisquam accusantium mollitia necessitatibus blanditiis quaerat impedit voluptates odio veniam dicta? Inventore!",
-        ],
-        [
-            "title" => "Administrasi Bisnis",
-            "slug" => "administrasi-bisnis",
-            "author" => "Surtoyo",
-            "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi placeat vel qui harum iusto eligendi saepe eum rerum eaque quod praesentium alias quibusdam expedita, debitis autem quisquam quis provident?
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta exercitationem aut inventore harum. Sint, qui illo suscipit sit nisi magni, cupiditate consequatur, quisquam dolores ex eum voluptates sapiente molestias consectetur.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, architecto commodi. Sint maxime ipsam voluptatibus aut? Non, accusamus quisquam accusantium mollitia necessitatibus blanditiis quaerat impedit voluptates odio veniam dicta? Inventore!",
-        ],
-    ];
-    public static function all()
-    {
-        return collect(self::$blog_posts);
-    }
-    public static function find($slug)
-    {
-        $posts = static::all();
-        // $post = [];
-        // foreach ($posts as $p) {
-        //     if ($p["slug"] === $slug) {
-        //         $post = $p;
-        //     }
-        // }
-        return $posts->firstWhere('slug', $slug);
-    }
+    use HasFactory;
+    // protected $fillable = ['title','author','excerpt','body']; // boleh diisi
+
+    protected $guarded = ['id']; // tidak boleh di isi
 }
