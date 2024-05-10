@@ -59,10 +59,18 @@ class Post
 
 Post::create(
     [
-        'title'=>'Teknik Sipil',
-        'slug'=> 'teknik-sipil',
-        'author' =>'Sukun',
-        'excerpt' => 'sipil ipsum dolor sit amet consectetur adipisicing elit. Doloribus laborum facilis debitis vel velit, nihil excepturi exercitationem odit ipsum maxime?',
+        'category_id' => 3,
+        'title'=>'Personal',
+        'slug'=> 'personal',
+        'author' =>'godzilla',
+        'excerpt' => 'personal ipsum dolor sit amet consectetur adipisicing elit. Doloribus laborum facilis debitis vel velit, nihil excepturi exercitationem odit ipsum maxime?',
         'body' => '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus laborum facilis debitis vel velit, nihil excepturi exercitationem odit ipsum maxime? Facilis, maiores nihil minus accusantium neque tempora repellendus suscipit quo nam, harum nisi. Nostrum provident sint iusto qui doloribus corrupti voluptate dolore, cum blanditiis quo praesentium magni quod? Quas necessitatibus cum aliquid suscipit ex omnis, facilis explicabo totam error voluptate quos eveniet, ut ducimus, unde fugit qui perferendis veritatis? Dolores itaque ducimus corporis dicta iste. Quod nesciunt, quae similique voluptas cupiditate suscipit atque, minus ratione ullam odit est aperiam eveniet eos inventore beatae commodi fuga ipsam! Maxime exercitationem assumenda facere modi temporibus odit expedita, autem est officiis quisquam vero doloremque commodi quaerat ratione, et provident quis, illo animi accusantium excepturi?</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam voluptatibus illo voluptate ab fuga, dolorum repellendus velit quidem distinctio, voluptatem officiis, possimus debitis id consectetur minus nesciunt qui ea amet totam nostrum labore dolor et? Reprehenderit fugiat possimus optio cum ullam? Id, doloremque eum nihil temporibus molestiae nobis asperiores accusantium sunt ex nemo perspiciatis, mollitia praesentium aliquam voluptates hic debitis tempora recusandae at, suscipit ipsa quos voluptatibus repudiandae ducimus placeat? Reprehenderit laudantium, molestiae nemo quasi ea sit ad magni perferendis voluptatem ab nulla a distinctio excepturi illum quod voluptates impedit id vitae? Perspiciatis enim accusantium nostrum earum minima id veritatis?</p><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam voluptatibus illo voluptate ab fuga, dolorum repellendus velit quidem distinctio, voluptatem officiis, possimus debitis id consectetur minus nesciunt qui ea amet totam nostrum labore dolor et? Reprehenderit fugiat possimus optio cum ullam? Id, doloremque eum nihil temporibus molestiae nobis asperiores accusantium sunt ex nemo perspiciatis, mollitia praesentium aliquam voluptates hic debitis tempora recusandae at, suscipit ipsa quos voluptatibus repudiandae ducimus placeat? Reprehenderit laudantium, molestiae nemo quasi ea sit ad magni perferendis voluptatem ab nulla a distinctio excepturi illum quod voluptates impedit id vitae? Perspiciatis enim accusantium nostrum earum minima id veritatis?</p>'
         ]
     )
+
+Category::create(
+    [
+        'name'=> "Personal",
+        'slug'=> 'personal'
+    ]
+)
